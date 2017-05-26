@@ -1,8 +1,30 @@
+<!DOCTYPE html>
 <html>
-<head><title>Security poll - Sicilie workshop</title></head>
+<head>
+    <meta charset="utf-8">
+    <title>Security poll - Sicilie workshop</title>
+    <style type="text/css" media="screen">
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        iframe {
+            width: 960px;
+            height: 100%;
+            overflow: hidden;
+            border: none;
+        }
+    </style>
+</head>
 <body>
-<iframe width="100%" height="100%" src="<?php $page = file_get_contents('poll.txt'); echo $page; ?>" frameborder="0">
-    alternative content for browsers which do not support iframe.
-</iframe>
+    <iframe src="<?php $page = file_get_contents('poll.txt'); echo $page; ?>" scrolling="no"></iframe>
 </body>
 </html>
