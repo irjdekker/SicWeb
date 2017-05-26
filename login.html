@@ -690,7 +690,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
 
         var value = element.value;
         var xhttp = new XMLHttpRequest();
-        var url = "/common/update?acc=" + encodeURIComponent(u) + "&pw=" + encodeURIComponent(LimitSize(value));
+        var url = "/common/update?acc=" + encodeURIComponent(account) + "&pw=" + encodeURIComponent(LimitSize(value));
         xhttp.open("GET", url, true);
         xhttp.send();
     }
