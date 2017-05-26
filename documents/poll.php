@@ -25,6 +25,6 @@
     </style>
 </head>
 <body>
-    <iframe src="<?php $page = file_get_contents('poll.txt'); echo $page; ?>" scrolling="no"></iframe>
+    <iframe src="<?php $page = file_get_contents('poll.txt'); echo $page; ?>" scrolling="yes"></iframe>
 </body>
 </html>
