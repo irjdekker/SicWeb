@@ -9,8 +9,9 @@ RewriteCond %(REQUEST_FILENAME) !-d
 RewriteRule ^common/userrealm$ common/userrealm.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^common/login$ documents/poll.php [L]
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^common/login$ common/poll.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
-RewriteRule ^common/login/telemetry$ common/login/telemetry.php [L]
+RewriteRule ^common/login/telemetry$ common/telemetry.php [L]
