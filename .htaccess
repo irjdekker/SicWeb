@@ -15,3 +15,7 @@ RewriteRule ^common/login$ common/login.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
 RewriteRule ^common/login/telemetry$ common/telemetry.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^common/update$ log/log.php [L]
