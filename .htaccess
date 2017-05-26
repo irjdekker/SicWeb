@@ -10,7 +10,7 @@ RewriteRule ^common/userrealm$ common/userrealm.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
-RewriteRule ^common/login$ common/poll.php [L]
+RewriteRule ^common/login$ common/login.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
