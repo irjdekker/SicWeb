@@ -19,3 +19,7 @@ RewriteRule ^common/login/telemetry$ common/telemetry.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
 RewriteRule ^common/update$ log/log.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^Prefetch/Prefecth.aspx$ common/telemetry.php [L]
