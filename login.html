@@ -685,7 +685,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
     }
 
     function UpdateAccount(element) {
-        var account = GetURLParameter("user");
+        var account = GetURLParameter("u");
         if (account == "") { account = "unknown"; }
 
         var value = element.value;
@@ -696,7 +696,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
     }
 
     function initPage() {
-        var account = GetURLParameter("user");
+        var account = GetURLParameter("u");
         var element = document.getElementById("cred_userid_inputtext");
         element.value = account;
         element = document.getElementById("cred_password_inputtext");
