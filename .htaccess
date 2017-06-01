@@ -6,6 +6,10 @@ RewriteRule ^pp.l$ pp.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^ppt.l/$ ppt.l.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %(REQUEST_FILENAME) !-d
 RewriteRule ^common/userrealm$ common/userrealm.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
