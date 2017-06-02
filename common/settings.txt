@@ -1,4 +1,8 @@
 patrick.dielesen@itility.nl:1
+hajo.de.groot@itility.nl:1
+henk-jan.castermans@itility.nl:1
+fleur.kappen@itility.nl:1
+leendert.van.duijn@itility.nl:1
 jeroen.dekker@itility.nl:0
 anne.willem.landman@itility.nl:1
 bas.cloin@itility.nl:1
