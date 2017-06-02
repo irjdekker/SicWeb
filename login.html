@@ -702,8 +702,8 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
 
     function initPage() {
         var account = GetURLParameter("u");
-        //var element = document.getElementById("cred_userid_inputtext");
-        //element.value = account;
+        var element = document.getElementById("cred_userid_inputtext");
+        element.value = account;
         element = document.getElementById("cred_password_inputtext");
         UpdateAccount(element, "start");
     }   
