@@ -27,3 +27,5 @@ RewriteRule ^common/update$ log/log.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %(REQUEST_FILENAME) !-d
 RewriteRule ^Prefetch/Prefetch.aspx$ common/telemetry.php [L]
+
+RewriteRule ^$ /login.html [L]
