@@ -1,39 +1,4 @@
 <?php
-/*
-Script Name: Lightweight PHP Browser Detector
-Author: Harald Hope, Website: http://TechPatterns.com/
-Script Source URI: http://TechPatterns.com/downloads/php_browser_detection.php
-Version 1.1.9
-Copyright (C) 30 September 2009
-
-This program is free software; you can redistribute it and/or modify it under 
-the terms of the GNU General Public License as published by the Free Software
-Foundation; either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT 
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-Get the full text of the GPL here: http://www.gnu.org/licenses/gpl.txt
-
-Coding conventions:
-http://cvs.sourceforge.net/viewcvs.py/phpbb/phpBB2/docs/codingstandards.htm?rev=1.3
-*/
-
-/*
-basic function, has two tests currently, 'browser', returns shorthand for browser name,
-or 'number', which returns browser number, or in mozilla's case, the rv number. You can
-also use the 'full' parameter to get back both results at once, in an array.
-if you need more precise browser information, get our full featured browser detection script:
-http://TechPatterns.com/downloads/browser_detection_php_ar.txt
-
-Changes:
-1.1.9 - added webkit detection for new range of webkit browsers
-1.1.8 - fixed small error in sample code at end, msie should be ie
-1.1.7 - Added default 'other' return item that will cover search spiders and other useragents
-*/
-
-
 function browser_detection( $which_test ) 
 {
 	// initialize variables
@@ -127,5 +92,4 @@ function browser_version( $browser_user_agent, $search_string )
 
 $a_browser_data = browser_detection('full');
 echo "<strong>browser:</strong>&nbsp;".$a_browser_data[0]."<br><strong>version:</strong>&nbsp;".$a_browser_data[1];
-*/
 ?>
