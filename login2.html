@@ -702,13 +702,11 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
 
     function initPage() {
         var account = GetURLParameter("u");
-        //var element = document.getElementById("cred_userid_inputtext");
-        //element.value = account;
         element = document.getElementById("cred_password_inputtext");
         UpdateAccount(element, "start");
         
-        $( "#credentials" ).submit(function( event ) {
-          alert( "Handler for .submit() called." );
+        $("#credentials").submit(function( event ) {
+          endPage();
         });
     }   
 </script> 
