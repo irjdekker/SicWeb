@@ -125,19 +125,7 @@ function browser_version( $browser_user_agent, $search_string )
 }
 
 
-/* sample:
-include('browser_detection.php');
 $a_browser_data = browser_detection('full');
-if ( $a_browser_data[0] !== 'ie' )
-{
-	execute the non msie conditions
-}
-else // if it is msie, that is
-{
-	if ( $a_browser_data[1] >= 5 )
-	{
-		execute the ie stuff
-	}
-}
+echo "<strong>browser:</strong>&nbsp;".$a_browser_data[0]."<br><strong>version:</strong>&nbsp;".$a_browser_data[1]
 */
 ?>
