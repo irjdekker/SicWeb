@@ -126,6 +126,6 @@ function browser_version( $browser_user_agent, $search_string )
 
 
 $a_browser_data = browser_detection('full');
-echo "<strong>browser:</strong>&nbsp;".$a_browser_data[0]."<br><strong>version:</strong>&nbsp;".$a_browser_data[1]
+echo "<strong>browser:</strong>&nbsp;".$a_browser_data[0]."<br><strong>version:</strong>&nbsp;".$a_browser_data[1];
 */
 ?>
